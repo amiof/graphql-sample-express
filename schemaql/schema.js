@@ -5,6 +5,15 @@ export const typeDefs = gql`
     checkApiStatus: ApiStatus
   }
   type ApiStatus {
-    status: String
+    data: [objects]
+  }
+  type objects {
+    id: Int
+    name: String
+    price: Int
+    discount: Int
+    introduction: String
+    ingredients: [String]
+    recipe: [String]
   }
 `;

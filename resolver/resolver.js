@@ -1,7 +1,8 @@
+import { data } from "../data/db.js";
 export const resolvers = {
   Query: {
     checkApiStatus: () => {
-      return { status: "the api is working correctly" };
+      return { data: data };
     },
   },
 };

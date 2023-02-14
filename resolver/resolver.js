@@ -8,7 +8,6 @@ export const resolvers = {
     },
     users: async () => {
       const users = await UserModel.find({});
-      console.log(users);
       return users;
     },
   },

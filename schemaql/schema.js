@@ -3,7 +3,7 @@ import { gql } from "apollo-server-express";
 export const typeDefs = gql`
   type Query {
     checkApiStatus: ApiStatus
-    users: Tuser
+    users: [user]
   }
   type ApiStatus {
     data: [objects]
@@ -18,9 +18,9 @@ export const typeDefs = gql`
     recipe: [String]
   }
 
-  type Tuser {
-    data: [user!]
-  }
+  # type Tuser {
+  #   data: [user]
+  # }
   type user {
     id: ID!
     name: String!

@@ -1,6 +1,6 @@
 import { data } from "../data/db.js";
 import { UserModel } from "../db/schema.js";
-// Bug-find all user dont work
+
 export const resolvers = {
   Query: {
     checkApiStatus: () => {
@@ -8,7 +8,7 @@ export const resolvers = {
     },
     users: async () => {
       const users = await UserModel.find({});
-
+      console.log(users);
       return users;
     },
   },
